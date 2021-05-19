@@ -1,0 +1,22 @@
+Ví dụ về class và project:
+  - class la thông tin sản phẩm
+    + có các thuộc tính, phương thức:
+      - màu sắc 
+      - tên sản phẩm 
+      - có bán ko 
+  - project la iphone    
+
+class iphone(val name: String, val color: String, var itforsale: Boolean) {
+    init{
+        println("initialized with name: ${this.name}, color: ${this.color}")
+    }
+    private val fullname = "$name $color"
+    fun hang(nam: String = ""){
+        println("$fullname san xuat vao nam $nam")
+    }
+}
+fun main(args: Array<String>){
+    var iphone = iphone(name = "iphone 6", color = "yellow", itforsale = true)
+    println("Name = ${iphone.name}, color = ${iphone.color}, itsale = ${iphone.itforsale}")
+    iphone.hang("2013")
+}
